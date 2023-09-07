@@ -1,0 +1,18 @@
+CQRS has three Messages:
+
+Command
+	-> action to be performed.
+Events
+	-> events are objects that describing something that has occured in the application. A typical source of events is the aggregate. when something important has occured within
+	the aggregate, it will raise an event.
+Queries
+
+Aggregate
+	An aggregate is an entity or group of entities that is always kept in a consitent state. 
+	The aggregate root is the entity within the aggregate that is responsible for maintaining the consitent state.
+	This makes the aggregate the primary building block for implementing a command model in CQRS based application.
+
+
+ docker run -d --name postgres-container -p 5432:5432 --network techbankNet -e POSTGRES_PASSWORD=techbankRootPsw --restart always -v postgressql_data:/var/lib/postgressql/data postgres:latest
+ 
+
